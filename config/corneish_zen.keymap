@@ -16,29 +16,6 @@
         };
     };
 
-    macros {
-        M1: M1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(LG(S))>;
-            label = "M1";
-        };
-
-        M3: M3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LA(DEL))>;
-            label = "M3";
-        };
-
-        M2: M2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LS(R))>;
-            label = "M2";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -67,10 +44,10 @@
 
             label = "Lower";
             bindings = <
-  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4         &kp N5               &kp NUMBER_6  &kp N7    &kp N8        &kp N9     &kp N0
-  &kp TAB       &kp MINUS     &kp EQUAL     &kp LEFT_BRACKET     &kp RIGHT_BRACKET    &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp SEMICOLON
-  &kp DEL       &M1           &M2           &kp C_AL_CALCULATOR  &to 3                &trans        &trans    &trans        &kp PG_UP  &kp PAGE_DOWN
-                              &M3           &trans               &trans               &trans        &trans    &trans
+  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3        &kp NUMBER_4         &kp N5               &kp NUMBER_6  &kp N7    &kp N8        &kp N9     &kp N0
+  &kp TAB       &kp MINUS      &kp EQUAL           &kp LEFT_BRACKET     &kp RIGHT_BRACKET    &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp SEMICOLON
+  &kp DEL       &kp LS(LG(S))  &kp LC(LS(R))       &kp C_AL_CALCULATOR  &to 3                &trans        &trans    &trans        &kp PG_UP  &kp PAGE_DOWN
+                               &kp LC(LA(DELETE))  &trans               &trans               &trans        &trans    &trans
             >;
         };
 
@@ -84,7 +61,7 @@
             label = "Raise";
             bindings = <
   &kp F1      &kp F2        &kp F3        &kp F4        &kp F5          &kp F6      &kp F7      &kp F8        &kp F9     &kp F10
-  &kp F11     &kp F12       &trans        &trans        &trans          &kp LEFT    &kp DOWN    &kp UP_ARROW  &kp RIGHT  &trans
+  &kp F11     &kp F12       &trans        &trans        &trans          &kp LEFT    &kp DOWN    &kp UP_ARROW  &kp RIGHT  &kp AT_SIGN
   &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_NXT  &bt BT_PRV  &trans        &kp PG_UP  &kp PAGE_DOWN
                             &trans        &trans        &mo 4           &trans      &trans      &trans
             >;
