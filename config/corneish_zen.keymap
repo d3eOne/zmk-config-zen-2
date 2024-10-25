@@ -3,8 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    chosen { zmk,matrix_transform = &five_column_transform; 
-  };
+    chosen { zmk,matrix_transform = &five_column_transform; };
 };
 
 / {
@@ -14,6 +13,29 @@
         Esc {
             bindings = <&kp ESC>;
             key-positions = <1 0>;
+        };
+    };
+
+    macros {
+        M1: M1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(S))>;
+            label = "M1";
+        };
+
+        M3: M3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(DEL))>;
+            label = "M3";
+        };
+
+        M2: M2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LS(R))>;
+            label = "M2";
         };
     };
 
